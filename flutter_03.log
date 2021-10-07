@@ -1,0 +1,91 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter create windows
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = 'C:\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_template_images-4.0.0\templates\app\windows.tmpl\runner\resources\app_icon.ico' (OS Error: The system cannot find the path specified.
+, errno = 3)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      ForwardingFile.openSync (package:file/src/forwarding/forwarding_file.dart:71:16)
+#3      ErrorHandlingFile.copySync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:308:22)
+#4      _runSync (package:flutter_tools/src/base/error_handling_io.dart:573:14)
+#5      ErrorHandlingFile.copySync (package:flutter_tools/src/base/error_handling_io.dart:307:5)
+#6      Template.render.<anonymous closure> (package:flutter_tools/src/template.dart:253:25)
+#7      _LinkedHashMapMixin.forEach (dart:collection-patch/compact_hash.dart:397:8)
+#8      Template.render (package:flutter_tools/src/template.dart:199:24)
+#9      CreateBase.renderTemplate (package:flutter_tools/src/commands/create_base.dart:397:21)
+<asynchronous suspension>
+#10     CreateBase.generateApp (package:flutter_tools/src/commands/create_base.dart:408:23)
+<asynchronous suspension>
+#11     CreateCommand.runCommand (package:flutter_tools/src/commands/create.dart:265:31)
+<asynchronous suspension>
+#12     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1043:27)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#14     CommandRunner.runCommand (package:args/command_runner.dart:196:13)
+<asynchronous suspension>
+#15     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:284:9)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#17     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:232:5)
+<asynchronous suspension>
+#18     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#19     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#20     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.2.2, on Microsoft Windows [Version 10.0.21996.1], locale en-US)
+    • Flutter version 2.2.2 at C:\flutter
+    • Framework revision d79295af24 (4 months ago), 2021-06-11 08:56:01 -0700
+    • Engine revision 91c9fc8fe0
+    • Dart version 2.13.3
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\Omar Jourieh\AppData\Local\Android\sdk
+    • Platform android-S, build-tools 30.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2019 16.11.2)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\Community
+    • Visual Studio Community 2019 version 16.11.31624.102
+    • Windows 10 SDK version 10.0.19041.0
+
+[✓] Android Studio (version 4.1.0)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+
+[✓] VS Code (version 1.60.2)
+    • VS Code at C:\Users\Omar Jourieh\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.26.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.21996.1]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 93.0.4577.82
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 94.0.992.31
+
+• No issues found!
+```
